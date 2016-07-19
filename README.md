@@ -1,25 +1,25 @@
-# TYL
+# Ted
 
-TYL is a fresh looking and responsive theme for [Hexo](http://hexo.io) with more features and some build-in Chinese service based on [Pacman](https://github.com/A-limon/pacman).  
+Ted is a fresh looking and responsive theme for [Hexo](http://hexo.io) with more features and some build-in Chinese service based on [Pacman](https://github.com/A-limon/pacman).  
 
 ##Installation
 ###Install
 ```
-$ git clone https://github.com/wuchong/TYL.git themes/TYL
+$ git clone https://github.com/YuliangTan/Ted.git themes/Ted
 ```
-**TYL requires Hexo 2.7 and above.** 
+**Ted requires Hexo 2.7 and above.** 
 ###Enable
-Modify `theme` setting in blog folder` _config.yml` to `tyl`.
+Modify `theme` setting in blog folder` _config.yml` to `ted`.
 ###Update
 ```
-cd themes/tyl
+cd themes/ted
 git pull origin master
 ```
 **please backup your `_config.yml` file before update.** 
 
 ##Configuration
 
-Modify settings in  `/themes/TYL/_config.yml`. [Learn More](https://github.com/wuchong/TYL/wiki/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97).
+Modify settings in  `/themes/Ted/_config.yml`. [Learn More](https://github.com/wuchong/TYL/wiki/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97).
 
 ##Features
 - **menu**  
