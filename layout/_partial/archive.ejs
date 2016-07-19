@@ -1,0 +1,48 @@
+<%
+var title = '';
+var icon = '';
+if (page.category){
+  title = page.category;
+  icon = 'category';
+};
+if (page.tag){
+  title = page.tag;
+  icon = 'tag';
+};
+if (page.archive){
+  icon = 'archive';
+  if (page.year) title = page.year+  (page.month ? '/' + page.month : '');
+  else title = __('archive_a');
+};
+%>
+		    <div class='post-module'>
+		      <div class='thumbnail'>
+		        <img src='/img/demo.jpg'>
+		      </div>
+		      <div class='post-content'>
+		        <div class='category'><% if (item.tags && item.tags.length){ %>  <% var tags = [];
+    item.tags.forEach(function(tag){
+      tags.push(tag.name);
+    }); %><%- tags.join('') %><% } %></div>
+		        <h1 class='title'><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></h1>
+		        <h2 class='sub_title'><%= strip_html(item.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 10) %></h2>
+		        <p class='description'><%= strip_html(item.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140) %></p>
+		        <div class='post-meta'>
+		          <span class='timestamp'>
+		            <i class='fa fa-clock-o'></i>
+		            <%= item.date.format('YYYY-MMM-DD') %>
+		          </span>
+		          <span class='comments'>
+		            <i class='fa fa-comments'></i>
+		            <span class="ds-thread-count" data-thread-key="<%= item.path %>"></span>
+		          </span>
+		        </div>
+		      </div>
+<% if (page.total > 1){ %>
+  <nav id="page-nav" class="clearfix archive-nav">
+    <%- paginator({
+      prev_text: '<span></span>Prev',
+      next_text: 'Next<span></span>'
+    }) %>
+  </nav>
+<% } %>

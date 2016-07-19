@@ -1,0 +1,12 @@
+<% if (theme.tip){ %>    
+    <script src="<%- theme.cdn_link %>js/banneralert.min.js" language="javascript"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+	$("body").showbanner({
+		title : "Dev-Tan",
+		icon : "<%- theme.cdn_link %>img/favicon.ico",
+		content : "Hello, world"
+	});
+});
+   </script>
+<% } %>

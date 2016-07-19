@@ -1,0 +1,14 @@
+<link rel='stylesheet' href="/css/timeline.css">
+<section id="cd-timeline" class="cd-container"> 
+    <div class="cd-timeline-block"> 
+        <div class="cd-timeline-img cd-picture"> 
+            <img src="/img/cd-icon-text.png" alt="Picture"> 
+        </div> 
+        <div class="cd-timeline-content"> 
+            <h2><%= item.title %></h2>             
+            <p><%= strip_html(item.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140) %></p> 
+            <a href="<%- config.root %><%- item.path %>" class="cd-read-more" target="_blank">阅读全文</a> 
+            <span class="cd-date"><%= item.date.format('YYYY-MMM-DD') %></span> 
+        </div> 
+    </div> 
+</section>

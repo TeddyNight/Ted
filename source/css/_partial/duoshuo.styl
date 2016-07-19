@@ -1,0 +1,232 @@
+#ds-thread #ds-reset .ds-post-button {
+font-family: Microsoft JHenghei, Microsoft YaHei, "Helvetica Neue",Helvetica,Arial,sans-serif; }
+#ds-thread #ds-reset .ds-textarea-wrapper textarea, #ds-thread #ds-reset .ds-textarea-wrapper .ds-hidden-text {
+display: block;
+font-family: Microsoft JHenghei, Microsoft YaHei , "Helvetica Neue",Helvetica,Arial,sans-serif;}
+#ds-thread #ds-reset .ds-meta {
+  border-bottom-color: #eee;
+}
+/* Like button */
+#ds-thread #ds-reset a.ds-like-thread-button {
+  border: 1px solid #ddd;
+  background: #f8f8f8;
+  border-radius: 2px;
+}
+/* Comments counter */
+#ds-thread #ds-reset li.ds-tab a.ds-current {
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  border-radius: 2px;
+}
+#ds-thread #ds-reset #ds-hot-posts {
+  border-color: #eee;
+  border-width: 0 0 1px;
+  margin: 10px 0;
+  padding-bottom: 15px;
+  border-radius: 0;
+}
+/* Main avatar */
+#ds-reset .ds-avatar img{
+    width:54px;height:54px; /*设置图像的长和宽*/
+    border-radius: 27px;/*设置图像圆角效果,在这里我直接设置了超过width/2的像素，即为圆形了*/
+    -webkit-border-radius: 27px;/*圆角效果：兼容webkit浏览器*/
+    -moz-border-radius:27px;
+    box-shadow: inset 0 -1px 0 #3333sf;/*设置图像阴影效果*/
+    -webkit-box-shadow: inset 0 -1px 0 #3333sf;
+    -webkit-transition: 0.4s;    
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;/*变化时间设置为0.4秒(变化动作即为下面的图像旋转360读）*/
+    -moz-transition: -moz-transform 0.4s ease-out;
+} 
+#ds-reset .ds-avatar img:hover{/*设置鼠标悬浮在头像时的CSS样式*/
+    box-shadow: 0 0 10px #fff; rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+    -webkit-box-shadow: 0 0 10px #fff; rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+    transform: rotateZ(360deg);/*图像旋转360度*/
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+   }
+/* Comments list */
+#ds-thread #ds-reset .ds-comments {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0 20px;
+  margin-bottom: 5px;
+}
+#ds-thread #ds-reset li.ds-post {
+  border-top: none;
+}
+#ds-thread #ds-reset .ds-post-self {
+  padding: 10px 2px;
+}
+#ds-thread #ds-reset .ds-comment-body {
+  position: relative;
+  margin-left: 62px;
+  border: 1px solid #ddd;
+  padding: 0 10px 10px!important;
+  border-radius: 2px;
+}
+#ds-thread #ds-reset .ds-comment-body:before,
+#ds-thread #ds-reset .ds-comment-body:after {
+  position: absolute;
+  top: 8px;
+  left: -8px;
+  right: 100%;
+  width: 0;
+  height: 0;
+  display: block;
+  content: " ";
+  border-color: transparent;
+  border-style: solid solid dotted;
+  border-width: 8px 8px 8px 0;
+  pointer-events: none;
+}
+#ds-thread #ds-reset .ds-comment-body:before {
+  border-right-color: #dedede;
+  z-index: 1;
+}
+#ds-thread #ds-reset .ds-comment-body:after {
+  border-right-color: #f8f8f8;
+  margin-left: 1px;
+  z-index: 2;
+}
+#ds-thread #ds-reset .ds-comment-header {
+  background-color: #f8f8f8;
+  padding: 10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+#ds-thread #ds-reset .ds-comment-body p {
+  font-size: 14px;
+}
+#ds-thread #ds-reset .ds-comment-footer {
+  margin-top: 15px;
+  font-size: 13px;
+}
+/* Nested */
+#ds-thread #ds-reset #ds-ctx {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+#ds-reset #ds-ctx .ds-ctx-entry .ds-avatar {
+  border-radius: 50%;
+}
+/* Comment textarea */
+#ds-thread #ds-reset .ds-textarea-wrapper {
+  background-image: none;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  border-color: #ddd;
+}
+#ds-reset .ds-gradient-bg {
+  background: #f8f8f8;
+}
+#ds-thread #ds-reset .ds-post-options {
+  border-bottom-left-radius: 2px;
+  border-color: #ddd;
+  height: 36px;
+}
+#ds-thread #ds-reset .ds-sync {
+  line-height: 34px;
+}
+#ds-thread #ds-reset .ds-toolbar-buttons {
+  top: 8px;
+  left: 10px;
+}
+#ds-thread #ds-reset .ds-textarea-wrapper textarea {
+  font-size: 14px;
+}
+/* Post Butoon */
+#ds-thread #ds-reset .ds-post-button {
+  border-bottom-right-radius: 2px;
+  background: #3bb4f2;
+  color: #fff;
+  text-shadow: none;
+  box-shadow: none;
+  border: 1px solid #ddd;
+  height: 38px;
+}
+#ds-thread #ds-reset .ds-post-button:hover {
+  background: #0f9ae0;
+  color: #fff;
+  text-shadow: none;
+}
+#ds-thread #ds-reset .ds-post-button:focus,
+#ds-thread #ds-reset .ds-post-button:active {
+  outline: 0;
+}
+#ds-thread #ds-reset .ds-paginator {
+  margin-bottom: 20px;
+}
+#ds-thread #ds-reset .ds-paginator a:hover,
+#ds-thread #ds-reset .ds-paginator a.ds-current {
+  border-radius: 2px;
+  border-color: #ddd;
+}
+/** Icon - Dependence FontAwesome */
+.ds-icon:before,
+.ds-add-emote:before,
+.ds-toolbar-button:before {
+  display: inline-block;
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  vertical-align: baseline;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ds-icon-heart,
+.ds-icon-reply,
+.ds-icon-like,
+.ds-icon-share,
+.ds-icon-report,
+.ds-icon-delete,
+.ds-icon-settings {
+  line-height: 13px !important;
+  background-image: none !important;
+}
+.ds-icon-heart:before {
+  content: "\f004";
+  color: #dd514c;
+}
+.ds-icon-reply:before {
+  content: "\f112";
+}
+.ds-icon-like:before {
+  content: "\f08a";
+}
+.ds-icon-share:before {
+  content: "\f064";
+}
+.ds-icon-report:before {
+  content: "\f06a";
+}
+.ds-icon-delete:before {
+  content: "\f00d";
+}
+.ds-icon-settings {
+  font-size: 12px !important;
+}
+.ds-icon-settings:before {
+  content: "\f013";
+}
+.ds-add-emote,
+.ds-toolbar-button {
+  line-height: 19px !important;
+  background: none !important;
+  font-size: 18px !important;
+}
+.ds-add-emote:before {
+  content: "\f118";
+}
+.ds-add-image:before {
+  content: "\f03e";
+}
+/* Narrow */
+#ds-thread.ds-narrow #ds-reset .ds-comment-body {
+  margin-left: 45px;
+}

@@ -1,0 +1,11 @@
+<% if (theme.lazyload){ %>
+<script type="text/javascript" src="//cdn.bootcss.com/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+    <script type="text/javascript">
+      jQuery(function() {          
+          jQuery("img").lazyload({
+            placeholder:"http://cdn.bootcss.com/fancybox/2.1.5/fancybox_loading.gif",
+              effect:"fadeIn"
+            });
+          });
+  </script>
+<% } %>

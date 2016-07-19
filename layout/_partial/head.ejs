@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html <% if (config.language) { %>lang="<%= config.language %>"<% } %>>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <link rel=”dns-prefetch” href=”//7nar2o.com5.z0.glb.clouddn.com”/>
+  <link rel=”dns-prefetch” href=”//cdn.bootcss.com”/>
+  <link rel=”dns-prefetch” href=”//devtan.xyz”/>
+  <link rel=”dns-prefetch” href=”//tongji.devtan.xyz”/>
+  
+  <%
+  var title = page.title;
+
+  if (is_archive()){
+    title = __('archive_a');
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title =  __('categories')+' : ' + page.category;
+  } else if (is_tag()){
+    title = __('tags')+' : ' + page.tag;
+  }
+  %>
+    <title><% if (title){ %><%= title %> | <% } %> <%= config.title %> - <%= theme.description %></title>
+    <meta name="wumiiVerification" content="46d88ae9-e87e-457c-b934-c2483e3dab6e" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <% if (config.author){ %>
+    <meta name="author" content="<%= config.author %>">
+    <% } %>
+
+    <% if (page.keywords){ %><meta name="keywords" content="<%= page.keywords %>"><% } else if (page.tags && page.tags.length) { %>
+    <meta name="keywords" content="<% var tags = [];
+    page.tags.forEach(function(tag){tags.push(tag.name);}); %><%- tags.join('') %>" /><% } else if (config.keywords) { %>
+    <meta name="keywords" content="<%= config.keywords %>" /><% } %>
+
+    <%- open_graph({twitter_id: theme.author.twitter, google_plus: theme.author.google_plus}) %>
+
+    <% if (theme.rss){ %>
+    <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+    <% } %>
+    <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.cdn_link %><%- theme.favicon %>">
+    <% } %>
+    <% if (theme.apple_icon){ %>
+    <link rel="apple-touch-icon" href="<%- theme.cdn_link %><%- theme.apple_icon %>">
+    <link rel="apple-touch-icon-precomposed" href="<%- theme.cdn_link %><%- theme.apple_icon %>">
+    <% } %>
+    <link rel='stylesheet' href="<%- theme.cdn_link %>css/style.css">
+    <style>
+.bellows__item:not(.bellows--is-open) > .bellows__content {
+  display: none; }
+
+.bellows__item.bellows--is-open > .bellows__content-wrapper,
+.bellows__item.bellows--is-closing > .bellows__content-wrapper {
+  display: block; }
+
+.bellows__content-wrapper {
+  display: none; }
+
+
+.banneralert{
+	/*position:fixed;
+	  width:100%;
+	  left:0;
+	Add by js */
+
+	background:#000;/* for IE8- */
+	background:rgba(0,0,0,.85);
+	font-family:"微软雅黑", "Microsoft Yahei";
+	font-size:13px;
+}
+.banneralert .bannercontainer{
+	margin:2px 8px;/* Do not use padding in ".banneralert", use margin here. */
+}
+.banneralert .bannertitlebar{
+	color:#FFF;
+	font-weight:bold;
+	margin-bottom:1px;
+}
+.banneralert .bannericon{
+	height:16px;
+	width:16px;
+	margin-right:7px;
+	vertical-align:middle;
+}
+.banneralert .bannercontent{
+	color:#FFF;
+}
+.banneralert .bannerhandle{
+	text-align:center;
+	height:6px;
+	width:35px;
+	background:#999;
+	border-radius:3px;
+	margin:3px auto;
+	cursor:hand;/* for IE6- */
+	cursor:pointer;
+}
+    </style>
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <%- partial('nprogress') %>
+    <%- partial('old-browsers') %>
+</head>
