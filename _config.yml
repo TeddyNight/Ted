@@ -63,8 +63,8 @@ creative_commons: none
 
 #### Author information
 author:
-  intro_line1:  "Don't be shy"# your introduction on the bottom of the page
-  intro_line2:  "Just try!"  ## the 2nd line
+  intro_line1:  "Alone,nobody understand.."# your introduction on the bottom of the page
+  intro_line2:  "Never Give up!"  ## the 2nd line
   weibo:      ## e.g. wuchong1014 or 2176287895 for http://weibo.com/2176287895
   weibo_verifier:  ## e.g. b3593ceb Your weibo-show widget verifier ,if you use weibo-show it is needed.
   tsina:      ## e.g. 2176287895  Your weibo ID,It will be used in share button.
@@ -72,7 +72,7 @@ author:
   zhihu:      ## e.g. jark  for http://www.zhihu.com/people/jark
   email:      ## e.g. imjark@gmail.com
   twitter:    ## e.g. jarkwu for https://twitter.com/jarkwu
-  github:     ## e.g. wuchong for https://github.com/wuchong
+  github: https://github.com/YuliangTan    ## e.g. wuchong for https://github.com/wuchong
   facebook:   ## e.g. imjark for https://facebook.com/imjark
   linkedin:   ## e.g. wuchong1014 for https://www.linkedin.com/in/wuchong1014
   google_plus:    ## e.g. "111190881341800841449" for https://plus.google.com/u/0/111190881341800841449, the "" is needed!
@@ -91,7 +91,6 @@ links:
     风帆云互联: http://crsno.com
     欧尼酱's blog: http://blog.onji.cn
     python ning's blog: http://python-ning.github.io/
-    小李熹熹: http://xlxxcn.com/forum.php
     秋天博客: http://sn.d1ll.com
     KIENG IDC: http://idc.kieng.cn/
     萌猴's blog: http://blog.moehou.com
@@ -124,7 +123,7 @@ cnzz_tongji:
 
 piwik: 
   enable: true
-  site: tongji.devtan.xyz
+  site: tj.sftp.pw
 #### Miscellaneous
 ShowCustomFont: true  ## you can change custom font in `variable.styl` and `font.styl` which in the theme folder `/jacman/source/css`.
 fancybox: true        ## if you use gallery post or want use fancybox please set the value to true.
